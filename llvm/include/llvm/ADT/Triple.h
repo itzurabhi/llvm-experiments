@@ -62,6 +62,7 @@ public:
     mipsel,         // MIPSEL: mipsel, mipsallegrexe, mipsr6el
     mips64,         // MIPS64: mips64, mips64r6, mipsn32, mipsn32r6
     mips64el,       // MIPS64EL: mips64el, mips64r6el, mipsn32el, mipsn32r6el
+    tricore,        // TRICORE: tricore 
     msp430,         // MSP430: msp430
     ppc,            // PPC: powerpc
     ppcle,          // PPCLE: powerpc (little endian)
@@ -823,6 +824,11 @@ public:
   /// Tests whether the target is VE
   bool isVE() const {
     return getArch() == Triple::ve;
+  }
+
+  /// Tests whether the target is TriCore
+  bool isTriCore() const {
+    return getArch() == Triple::tricore;
   }
 
   /// Tests whether the target is wasm (32- and 64-bit).

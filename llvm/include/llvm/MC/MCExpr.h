@@ -313,6 +313,11 @@ public:
     VK_PPC_NOTOC,           // symbol@notoc
     VK_PPC_PCREL_OPT,       // .reloc expr, R_PPC64_PCREL_OPT, expr
 
+    VK_TRICORE_LO, // For TriCore Architecture
+    VK_TRICORE_HI,
+		VK_TRICORE_HI_OFFSET,
+		VK_TRICORE_LO_OFFSET,
+
     VK_COFF_IMGREL32, // symbol@imgrel (image-relative)
 
     VK_Hexagon_LO16,

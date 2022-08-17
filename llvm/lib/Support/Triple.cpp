@@ -74,6 +74,7 @@ StringRef Triple::getArchTypeName(ArchType Kind) {
   case tcele:          return "tcele";
   case thumb:          return "thumb";
   case thumbeb:        return "thumbeb";
+  case tricore:        return "tricore";
   case ve:             return "ve";
   case wasm32:         return "wasm32";
   case wasm64:         return "wasm64";
@@ -152,6 +153,7 @@ StringRef Triple::getArchTypePrefix(ArchType Kind) {
 
   case spirv32:
   case spirv64:     return "spirv";
+  case tricore:        return "tricore";
 
   case kalimba:     return "kalimba";
   case lanai:       return "lanai";
@@ -333,6 +335,7 @@ Triple::ArchType Triple::getArchTypeForLLVMName(StringRef Name) {
     .Case("spirv64", spirv64)
     .Case("kalimba", kalimba)
     .Case("lanai", lanai)
+    .Case("tricore", tricore)
     .Case("shave", shave)
     .Case("wasm32", wasm32)
     .Case("wasm64", wasm64)
@@ -757,6 +760,7 @@ static Triple::ObjectFormatType getDefaultFormat(const Triple &T) {
   case Triple::thumbeb:
   case Triple::ve:
   case Triple::xcore:
+  case Triple::tricore:
     return Triple::ELF;
 
   case Triple::ppc64:
@@ -1311,6 +1315,7 @@ static unsigned getArchPointerBitWidth(llvm::Triple::ArchType Arch) {
   case llvm::Triple::wasm32:
   case llvm::Triple::x86:
   case llvm::Triple::xcore:
+  case llvm::Triple::tricore:
     return 32;
 
   case llvm::Triple::aarch64:
@@ -1398,6 +1403,7 @@ Triple Triple::get32BitArchVariant() const {
   case Triple::wasm32:
   case Triple::x86:
   case Triple::xcore:
+  case Triple::tricore:
     // Already 32-bit.
     break;
 
@@ -1444,6 +1450,7 @@ Triple Triple::get64BitArchVariant() const {
   case Triple::tce:
   case Triple::tcele:
   case Triple::xcore:
+  case Triple::tricore:
     T.setArch(UnknownArch);
     break;
 
@@ -1535,6 +1542,7 @@ Triple Triple::getBigEndianArchVariant() const {
   case Triple::x86:
   case Triple::x86_64:
   case Triple::xcore:
+  case Triple::tricore:
   case Triple::ve:
   case Triple::csky:
 
@@ -1643,6 +1651,7 @@ bool Triple::isLittleEndian() const {
   case Triple::x86:
   case Triple::x86_64:
   case Triple::xcore:
+  case Triple::tricore:
     return true;
   default:
     return false;

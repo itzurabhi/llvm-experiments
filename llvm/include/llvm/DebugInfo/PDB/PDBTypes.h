@@ -134,6 +134,7 @@ enum class PDB_Machine {
   x86 = 0x14C,
   Ia64 = 0x200,
   M32R = 0x9041,
+  TriCore = 0xc0,
   Mips16 = 0x266,
   MipsFpu = 0x366,
   MipsFpu16 = 0x466,
