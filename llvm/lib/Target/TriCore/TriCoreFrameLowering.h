@@ -15,7 +15,7 @@
 #ifndef TriCoreFRAMEINFO_H
 #define TriCoreFRAMEINFO_H
 
-#include "llvm/Target/TargetFrameLowering.h"
+#include "llvm/CodeGen/TargetFrameLowering.h"
 #include "llvm/Target/TargetMachine.h"
 
 namespace llvm {

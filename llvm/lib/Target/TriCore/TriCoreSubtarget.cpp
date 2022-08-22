@@ -13,7 +13,7 @@
 
 #include "TriCoreSubtarget.h"
 #include "TriCore.h"
-#include "llvm/Support/TargetRegistry.h"
+#include "llvm/MC/TargetRegistry.h"
 
 #define DEBUG_TYPE "leg-subtarget"
 

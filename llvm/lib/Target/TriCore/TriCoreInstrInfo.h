@@ -15,7 +15,7 @@
 #define TriCoreINSTRUCTIONINFO_H
 
 #include "TriCoreRegisterInfo.h"
-#include "llvm/Target/TargetInstrInfo.h"
+#include "llvm/CodeGen/TargetInstrInfo.h"
 
 #define GET_INSTRINFO_HEADER
 #include "TriCoreGenInstrInfo.inc"

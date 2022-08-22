@@ -14,11 +14,12 @@
 #ifndef TriCoreSELECTIONDAGINFO_H
 #define TriCoreSELECTIONDAGINFO_H
 
-#include "llvm/Target/TargetSelectionDAGInfo.h"
+#include "llvm/CodeGen/SelectionDAGTargetInfo.h"
+#include "llvm/Target/TargetMachine.h"
 
 namespace llvm {
 
-class TriCoreSelectionDAGInfo : public TargetSelectionDAGInfo {
+class TriCoreSelectionDAGInfo : public SelectionDAGTargetInfo {
 public:
   ~TriCoreSelectionDAGInfo();
 };

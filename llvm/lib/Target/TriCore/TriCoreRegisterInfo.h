@@ -14,7 +14,7 @@
 #ifndef TriCoreREGISTERINFO_H
 #define TriCoreREGISTERINFO_H
 
-#include "llvm/Target/TargetRegisterInfo.h"
+#include "llvm/CodeGen/TargetRegisterInfo.h"
 
 #define GET_REGINFO_HEADER
 #include "TriCoreGenRegisterInfo.inc"
