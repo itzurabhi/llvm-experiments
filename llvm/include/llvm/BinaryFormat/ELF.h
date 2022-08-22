@@ -871,6 +871,13 @@ enum {
 #include "ELFRelocs/CSKY.def"
 };
 
+//FIXME(itzurabhi): use proper relocations
+//ELF Relocation types for TriCore
+enum {
+#include "ELFRelocs/TriCore.def"
+};
+
+
 #undef ELF_RELOC
 
 // Section header.
