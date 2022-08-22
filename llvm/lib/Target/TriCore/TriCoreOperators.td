@@ -19,7 +19,7 @@ def MoveImm64Ty : SDTypeProfile<1, 1, [
   SDTCisSameAs<0, 1>, SDTCisVT<0, i64>
 ]>;
 
-def SDT_TriCoreCallSeqStart : SDCallSeqStart<[ SDTCisVT<0, i32> ]>;
+def SDT_TriCoreCallSeqStart : SDCallSeqStart<[ SDTCisVT<0, i32>,SDTCisVT<1, i32> ]>;
 
 def SDT_TriCoreCallSeqEnd   : SDCallSeqEnd<[
   SDTCisVT<0, i32>, SDTCisVT<1, i32>

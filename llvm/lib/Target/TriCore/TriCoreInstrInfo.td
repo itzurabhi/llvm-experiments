@@ -806,9 +806,9 @@ let usesCustomInserter = 1 in {
 //===----------------------------------------------------------------------===//
 
 let Defs = [A10], Uses = [A10] in {
-def ADJCALLSTACKDOWN : Pseudo<(outs), (ins i32imm:$amt),
-                                    "# ADJCALLSTACKDOWN $amt",
-                                    [(callseq_start timm:$amt)]>;
+def ADJCALLSTACKDOWN : Pseudo<(outs), (ins i32imm:$amt, i32imm:$amt2),
+                                    "# ADJCALLSTACKDOWN $amt $amt2",
+                                    [(callseq_start timm:$amt, timm:$amt2)]>;
 def ADJCALLSTACKUP   : Pseudo<(outs), (ins i32imm:$amt1, i32imm:$amt2),
                                     "# ADJCALLSTACKUP $amt1",
                                     [(callseq_end timm:$amt1, timm:$amt2)]>;
