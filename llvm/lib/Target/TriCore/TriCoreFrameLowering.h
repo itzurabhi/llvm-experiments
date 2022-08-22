@@ -33,12 +33,12 @@ public:
   void emitEpilogue(MachineFunction &MF,
                               MachineBasicBlock &MBB) const override;
 
-  void eliminateCallFramePseudoInstr(MachineFunction &MF,
+  MachineBasicBlock::iterator eliminateCallFramePseudoInstr(MachineFunction &MF,
                                      MachineBasicBlock &MBB,
                                      MachineBasicBlock::iterator I)
                                      const override;
 
-  bool hasFP(const MachineFunction &MF) const;
+  bool hasFP(const MachineFunction &MF) const override;
 
   //! Stack slot size (4 bytes)
   static int stackSlotSize() { return 8; }

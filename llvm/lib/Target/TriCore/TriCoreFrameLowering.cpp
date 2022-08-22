@@ -139,7 +139,9 @@ void TriCoreFrameLowering::eliminateCallFramePseudoInstr(
     MachineBasicBlock::iterator I) const {
   if (I->getOpcode() == TriCore::ADJCALLSTACKUP ||
       I->getOpcode() == TriCore::ADJCALLSTACKDOWN) {
-    MBB.erase(I);
+      return MBB.erase(I);
   }
-  return;
+
+  //FIXME(itzurabhi): must figure out what the default return should be
+  return MBB.end();
 }
